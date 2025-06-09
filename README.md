@@ -71,8 +71,26 @@ An ASCII animation mode reads `.txt` files formatted like this:
 - The display does not support UTF-8
 - Umlauts like `ä`, `ö`, `ü` work correctly if sent as `0xE4`, `0xF6`, `0xFC` (ISO-8859-1)
 - Accented letters like `é`, `è` are not supported
-- Control characters like STX/ETX are not required
+- Control characters like STX/ETX are not allowed, they will destroy the alignment
 
+## Display Restoration & Changes
+
+The display has undergone several changes to ensure continued operation and readability. Below are images showing the display **before** and **after** restoration:
+
+| Before (old) | After (new) |
+|:------------:|:-----------:|
+| ![Old Display](/img/old.png) | ![New Display](/img/new.png) |
+
+### Why were changes necessary?
+
+- The original program dates back to 2002 and showed signs of aging and limited functionality.
+- It was challenging to quickly input and update race results and other relevant data.
+- Compatibility with modern hardware interfaces was lacking.
+- Improving readability and reliability of the display was needed.
+
+### Why are some characters red?
+
+Certain characters are displayed in **red** to indicate **defective matrix cells**. These cells cannot correctly display characters. The software marks these positions so users are aware that reliable display is not possible there.
 ## License
 
 This project is licensed under the **GNU Affero General Public License v3.0**.
